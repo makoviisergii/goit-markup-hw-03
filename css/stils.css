@@ -4,6 +4,14 @@
 /* основной фон #F5F5F5*/
 /* вторичный фон #F5F4FA*/
 /* акцнт #2196F3 */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
 :root {
     --primary-text-color: #757575;
@@ -15,6 +23,8 @@
 }
 
 .list {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -91,6 +101,15 @@ body {
     color: var(--accent-text-color);
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    outline: 2px solid tomato;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /* hero */
 
 .hero {
@@ -123,6 +142,9 @@ line-height: 1.88;
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
+
+border-radius: 4px;
+padding: 10px 32px;
 
 border-color: var(--accent-text-color);
 }
@@ -211,7 +233,8 @@ address .contact-link {
 /* filtr */
 
 
-.filtr-item .button {
+
+.filtr-button {
     color: var(--title-text-color);
   (--secondary-bg-color);
 
@@ -222,10 +245,15 @@ address .contact-link {
     line-height: 1.63;
 
     border-color: var(--secondary-bg-color);
+    border-radius: 4px;
+    padding: 6px 22px;
  }
+.oll {
+    padding: 6px 25px;
+}
 
-.filtr-item .button:hover, 
-.filtr-item .button:focus {
+.filtr-button:hover, 
+.filtr-button:focus {
     color: #ffffff;
     background-color: var(--accent-text-color);
     cursor: pointer;
