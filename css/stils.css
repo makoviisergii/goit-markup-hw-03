@@ -4,30 +4,46 @@
 /* основной фон #F5F5F5*/
 /* вторичный фон #F5F4FA*/
 /* акцнт #2196F3 */
-html {
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
+
+
 
 :root {
     --primary-text-color: #757575;
     --secondary-text-color:#ffffff;
     --title-text-color:#212121;
     --accent-text-color:#2196F3;
-    --primery-bg-color:#F5F5F5;
+    --primery-bg-color:#FFFFFF;
     --secondary-bg-color:#F5F4FA;
+    --buttons-color: #F5F4FA;
 }
 
-.list {
-    padding: 0;
-    margin: 0;
+.list {   
     list-style: none;
+ 
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
 
+ul,
+ol {
+    margin: 0;
+    padding-left: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+address {
+    font-style: normal;
+}
 a {
     text-decoration: none;
 }
@@ -53,15 +69,33 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.section {
+    padding-bottom: 95px;
+    padding-top: 95px;
+}
+
 /* styles index */
 
 /* site nav */
+    
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
 
 .logo-head {
     color:var(--accent-text-color);
+
  }
 
 .logo {
+
     color: #000000;
 
     font-family: Raleway, cursive;
@@ -71,8 +105,26 @@ body {
     line-height: 1.2;
 }
 
+.site-nav {
+    display: flex;
+    margin-left: 95px;
+}
+
+
+.nav-item {
+
+}
+
+.nav-item +.nav-item {
+    margin-left: 50px;
+}
+
 
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color:var(--title-text-color);
     font-weight: 500;
     line-height: 1.14;
@@ -86,6 +138,16 @@ body {
 .site-nav .link.carent {
     color: var(--accent-text-color);
 }
+
+header .contacts {
+    display: flex ;
+    margin-left: auto;
+}
+
+.contact-item+.contact-item { 
+    margin-left: 50px;
+}
+
 
 .contact-link {
     color: var(--primary-text-color);
@@ -101,8 +163,7 @@ body {
     color: var(--accent-text-color);
 }
 
-.container {
-    outline: 2px solid tomato;
+.container { 
 
     margin-left: auto;
     margin-right: auto;
@@ -113,17 +174,21 @@ body {
 /* hero */
 
 .hero {
-    outline: 2px solid tomato;
+    width: 1600px;
+    height: 600px;
+    margin: 0 auto;
 
-    background-color: #212121;
+    background-color: #2F303A;
     text-align: center;
 
 }
  .hero-title {
 color: var(--secondary-text-color);
 
-margin-top: 0px;
+margin: 0 auto;
+padding-top: calc(200 -95)px;
 margin-bottom: 30px;
+max-width: 695px;
 
 font-weight: 900;
 font-size: 44px;
@@ -137,6 +202,7 @@ text-transform: uppercase;
 /*hero button */
 
 .hero .button {
+    margin-bottom: 200px;
 
 color: var(--secondary-text-color);
 background-color: var(--accent-text-color);
@@ -164,17 +230,34 @@ border-color: var(--accent-text-color);
     cursor: pointer;
     }
 
+
 /* about us */
 
 .about {
     padding-top: 95px;
-    padding-bottom: 85px;
+    padding-bottom: 95px;
 }
+
+.about-item+.about-item {
+    margin-left: 30px;
+}
+
+.feature-list {
+    display: block;   
+     display: flex;
+    }
+
+.about-item {
+    flex-grow: 1;
+}
+
+
 
 .about-title {
 
     margin-top: 0;
     margin-bottom: 10px;
+    align-content: center;
 
     color: var(--title-text-color);
     
@@ -196,8 +279,17 @@ border-color: var(--accent-text-color);
 /* What do we do? */
 
 .what-do-we-do {
-    padding-bottom: 95px;
 
+    padding-bottom: 95px;
+}
+
+.we-do {
+    display: flex;
+    justify-content: space-between;
+}
+
+.we-do-item {
+ 
 }
 
 .section-title {
@@ -218,7 +310,9 @@ border-color: var(--accent-text-color);
 }
 
 .team-name {
-  color: var(--title-text-color);
+    margin-bottom: 10px;
+
+    color: var(--title-text-color);
 
     font-style: normal;font-weight: 500;
     font-size: 16px;
@@ -226,19 +320,60 @@ border-color: var(--accent-text-color);
     text-align: center;
 }
 
-.team p {
+.team {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-item {
+
+}
+
+.card {
+
+    width: 270px;
+    height: 368px;
+
+    text-align: center;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    border-radius: 0px 0px 4px 4px;
+}
+
+.imag {
+    margin-bottom: 30px;
+
+}
+
+.prof {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
-/* futter */
+/* footer */
 
-footer {
-    background-color: #212121;
-    
+.footer {
+
+    width: 1600px;
+    height: 255px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
 }
-footer .logo {
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
     color: #ffffff;
+}
+
+.footer .contact-link {
+    display: block;
+    margin-top: 10px;
 }
 
 .address-link {
@@ -259,22 +394,43 @@ address .contact-link {
 
 /* filtr batton */
 
+.filtr-ptn {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+} 
+
+
+.filtr-item+.filtr-item {
+    margin-left: 8px;
+}
+
+
+.buttons {
+    padding-bottom: 50px;
+}
 
 
 .filtr-button {
-    color: var(--title-text-color);
-  (--secondary-bg-color);
 
-    background-color: var  font-family: Roboto;
+    color: var(--title-text-color);
+
+    font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
 
-    border-color: var(--secondary-bg-color);
+    
+    background-color: var(--buttons-color);
     border-radius: 4px;
     padding: 6px 22px;
+    border: none;
  }
+
 .oll {
     padding: 6px 25px;
 }
@@ -287,9 +443,46 @@ address .contact-link {
    }
 
  /* works */
- 
+
+ .project {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+
+
+ }
+
+ .project-item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+.project-item:nth-child(3n+3) {
+    
+    margin-right: 0 ;
+   }
+
+.project-item:nth-last-child(-n+3)
+ {
+    margin-bottom: 0;
+}
+
+ .project-item {
+
+     width: 370px;
+     height: 404px;
+     
+     background: #FFFFFF;
+     border: 1px solid #EEEEEE;
+    }
+
+.description {
+    padding: 20px 24px;
+}
 
  .project-title {
+
+    padding-bottom: 5px;
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
