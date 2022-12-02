@@ -202,18 +202,17 @@ header .contacts {
 
 .hero {
     width: 1600px;
-    height: 600px;
     margin: 0 auto;
+    padding: 200px 0;
 
     background-color: #2F303A;
     text-align: center;
 
 }
- .hero-title {
+.hero-title {
 color: var(--secondary-text-color);
 
 margin: 0 auto;
-padding-top: calc(200 -95)px;
 margin-bottom: 30px;
 max-width: 695px;
 
@@ -229,7 +228,6 @@ text-transform: uppercase;
 /*hero button */
 
 .hero .button {
-    margin-bottom: 200px;
 
 color: var(--secondary-text-color);
 background-color: var(--accent-text-color);
